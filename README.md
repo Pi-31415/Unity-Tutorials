@@ -17,3 +17,6 @@ Unity Tutorials on web which work
 
 ## Subtitles
 - [Use TMPro] : https://www.youtube.com/watch?v=mU6Euqcm9UM&ab_channel=JimmyVegas
+
+## Itch.io
+- [File size limit]: https://itch.io/t/894358/need-more-file-upload-size-than-1gb
