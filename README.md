@@ -20,3 +20,7 @@ Unity Tutorials on web which work
 
 ## Itch.io
 - [File size limit]: https://itch.io/t/894358/need-more-file-upload-size-than-1gb
+
+## Spine
+
+- [Photoshop to Spine] : https://www.youtube.com/watch?v=p7yZET00GeE&ab_channel=EsotericSoftware
