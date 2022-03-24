@@ -24,3 +24,4 @@ Unity Tutorials on web which work
 ## Spine
 
 - [Photoshop to Spine] : https://www.youtube.com/watch?v=p7yZET00GeE&ab_channel=EsotericSoftware
+- [Rigging, Meshes and Weights] : https://www.youtube.com/watch?v=EINSFrcznYs&ab_channel=ThinkCitric
