@@ -13,6 +13,9 @@ Unity Tutorials on web which work
 ## Buttons
 - [Click] : https://www.youtube.com/watch?v=kdkrjCF0KCo&ab_channel=Jayanam
 
+## Camera
+- [SmoothFollow] : https://www.youtube.com/watch?v=_QnPY6hw8pA
+
 ## WebGL
 
 - [Custom WebGL Template] : https://docs.unity3d.com/Manual/webgl-templates.html
