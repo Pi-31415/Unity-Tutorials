@@ -6,7 +6,9 @@ Unity Tutorials on web which work
 
 - [2D Lights Setup] : https://www.youtube.com/watch?v=n08EA3svNT8&ab_channel=BMo
 - [Post Processing] : https://www.youtube.com/watch?v=LgMO7hRQRQs&ab_channel=Sykoo
-- 
+
+## Data
+- [Storing Data Globally - Player Prefs] : https://forum.unity.com/threads/simple-local-data-storage.468936/
 
 ## Buttons
 - [Click] : https://www.youtube.com/watch?v=kdkrjCF0KCo&ab_channel=Jayanam
