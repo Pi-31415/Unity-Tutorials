@@ -24,6 +24,12 @@ Unity Tutorials on web which work
 - [Custom WebGL Template] : https://docs.unity3d.com/Manual/webgl-templates.html
 - [Solve FS.syncfs error] : https://forum.unity.com/threads/warning-x-fs-syncfs-operations-in-flight-at-once-probably-just-doing-extra-work.447255/
 
+```
+/Applications/Unity/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/src/library_fs.js
+
+Commenting out lines 495-497 does the trick.
+```
+
 ## Subtitles
 - [Use TMPro] : https://www.youtube.com/watch?v=mU6Euqcm9UM&ab_channel=JimmyVegas
 
