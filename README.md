@@ -1,5 +1,5 @@
-# Unity-Tutorials
-Unity Tutorials on web which work
+# Unity-Tutorials-and-Techniques
+Unity Tutorials on web which work, and common techniques I use for my projects
 
 
 ## Scaffolding 
@@ -12,6 +12,11 @@ Unity Tutorials on web which work
 
 ## Buttons
 - [Click] : https://www.youtube.com/watch?v=kdkrjCF0KCo&ab_channel=Jayanam
+
+## Physics
+> Note : For physics calculations, use FixedUpdate instead of Update.
+- [Lagging RayCast Issue] : https://stackoverflow.com/questions/56419887/dragging-an-object-with-raycast-is-laggy
+
 
 ## Scene Transition
 - [FadeFreeAsset]. : https://assetstore.unity.com/packages/tools/particles-effects/simple-fade-scene-transition-system-81753
