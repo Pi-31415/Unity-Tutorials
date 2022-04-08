@@ -12,6 +12,8 @@ Unity Tutorials on web which work, and common techniques I use for my projects
 
 ## Buttons
 - [Click] : https://www.youtube.com/watch?v=kdkrjCF0KCo&ab_channel=Jayanam
+- [CannotClickButton] : https://forum.unity.com/threads/cant-click-ui-buttons.431042/
+> If you cannot click button, probably the EventSystem is missing in your secene.
 
 ## Physics
 > Note : For physics calculations, use FixedUpdate instead of Update.
