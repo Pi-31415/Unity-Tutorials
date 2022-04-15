@@ -1,5 +1,4 @@
-//Point and click movement with lagging
-
+//Point and click movement
 using System.Collections;
 using System.Collections.Generic;
 using Spine.Unity;
@@ -27,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public AnimationReferenceAsset
 
             idle,
-            walking;
+            walking,
+            dancing;
 
     public string currentState;
 
@@ -35,9 +35,6 @@ public class PlayerMovement : MonoBehaviour
     public float rotate_scale = 0.4f;
 
     public string currentAnimation;
-
-    //Facing Right or left
-    bool facing_right = true;
 
     //Cursor
     public GameObject handCursor;
@@ -55,8 +52,8 @@ public class PlayerMovement : MonoBehaviour
         PlayerPrefs.SetInt("hittingWall", 0);
         PlayerPrefs.SetInt("dogWallHitTrigger", 0);
 
-        //For Controller
-        PlayerPrefs.SetInt("playerAllowedToMove", 1);
+        //For Dancing Scene
+        PlayerPrefs.SetInt("playerDancing", 0);
 
         //Sound Configurations
         footstep_wood.loop = true;
@@ -89,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
         {
             setAnimation(walking, true, 1f);
         }
+        else if (state.Equals("Dancing"))
+        {
+            setAnimation(dancing, true, 1f);
+        }
     }
 
     public void Stop()
@@ -100,8 +101,15 @@ public class PlayerMovement : MonoBehaviour
         footstep_wood.Pause();
         moving = false;
 
-        //Reset Animation State
-        setCharacterState("Idle");
+        //Reset Animation State, if not dancing
+        if (PlayerPrefs.GetInt("playerDancing") == 1)
+        {
+            setCharacterState("Dancing");
+        }
+        else
+        {
+            setCharacterState("Idle");
+        }
 
         //Movement available again
         PlayerPrefs.SetInt("hittingWall", 0);
@@ -136,10 +144,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        //Do not allow rotation
+        transform.eulerAngles = new Vector2(0f, 0f);
+
         //Detects the mouse input coordinates and translate to world
-        if (Input.GetMouseButtonDown(0))
+        if (
+            Input.GetMouseButtonDown(0) &&
+            PlayerPrefs.GetInt("playerAllowedToMove") == 1
+        )
         {
             lastClickedPos =
                 Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -157,10 +171,7 @@ public class PlayerMovement : MonoBehaviour
             Quaternion.identity);
             moving = true;
         }
-    }
 
-    private void Update()
-    {
         if (
             PlayerPrefs.GetInt("hittingWall") == 0 &&
             PlayerPrefs.GetInt("playerAllowedToMove") == 1
