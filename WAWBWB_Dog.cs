@@ -1,3 +1,4 @@
+//Working dog controller for player point and click
 //Old dog controller for player point and click
 using System.Collections;
 using System.Collections.Generic;
@@ -39,6 +40,8 @@ public class DogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Do not allow rotation
+        transform.eulerAngles = new Vector2(0f, 0f);
         Move();
     }
 
@@ -104,28 +107,35 @@ public class DogController : MonoBehaviour
         player_position = PlayerPrefs.GetFloat("playerPosition");
 
         //Make dog go near player if too far
-        if ((player_position - transform.position[0]) > 2.5)
+        if (
+            (Mathf.Abs(player_position - transform.position[0]) > 2.5) &&
+            movement >= 0
+        )
+        //Movement >= 0 is for the dog not to rotate
         {
             movement = player_position - transform.position[0];
+        }
+        else if ((player_position - transform.position[0]) < 1)
+        {
+            movement = 0f;
         }
 
         //Set Dog Speed according to player
         if (movement > 0)
         {
-            speed = 3.0f;
+            speed = 4.0f;
             movement = 1;
         }
         else if (movement < 0)
         {
-            speed = 3.5f;
+            speed = 4.5f;
             movement = (-1);
         }
 
         //Stop the Dog when the wall collision occurs on either dog or girl
         if (PlayerPrefs.GetInt("dogWallHitTrigger") == 0)
         {
-            rigidbody.velocity =
-                new Vector2(movement * speed, rigidbody.velocity.y);
+            rigidbody.velocity = new Vector2(movement * speed, 0.0f);
         }
         else
         {
@@ -143,11 +153,11 @@ public class DogController : MonoBehaviour
             {
                 setCharacterState("Idle");
             }
-            if (movement > 0)
+            if (movement >= 0)
             {
                 transform.localScale = new Vector2(rotate_scale, rotate_scale);
             }
-            else
+            else if (movement < 0)
             {
                 transform.localScale = new Vector2(-rotate_scale, rotate_scale);
             }
