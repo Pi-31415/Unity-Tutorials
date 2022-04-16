@@ -37,10 +37,9 @@ Commenting out lines 495-497 does the trick.
 ```
 
 ## Optimization
-
-- [Optimizing WebGL Build] : https://medium.com/game-development-stuff/how-to-export-your-unity-3d-project-to-webgl-and-keep-a-reasonable-build-size-8f6a719e7c18
-- 
 - [Large File Detection]: https://docs.unity3d.com/Manual/ReducingFilesize.html
+- [Optimizing WebGL Build] : https://medium.com/game-development-stuff/how-to-export-your-unity-3d-project-to-webgl-and-keep-a-reasonable-build-size-8f6a719e7c18
+
 
 
 ## Subtitles
