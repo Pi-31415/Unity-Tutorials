@@ -30,12 +30,17 @@ Unity Tutorials on web which work, and common techniques I use for my projects
 
 - [Custom WebGL Template] : https://docs.unity3d.com/Manual/webgl-templates.html
 - [Solve FS.syncfs error] : https://forum.unity.com/threads/warning-x-fs-syncfs-operations-in-flight-at-once-probably-just-doing-extra-work.447255/
-- [Optimization and Reducing File Size]: https://docs.unity3d.com/Manual/ReducingFilesize.html
 ```
 /Applications/Unity/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/src/library_fs.js
 
 Commenting out lines 495-497 does the trick.
 ```
+
+## Optimization
+
+- [Optimizing WebGL Build] : https://medium.com/game-development-stuff/how-to-export-your-unity-3d-project-to-webgl-and-keep-a-reasonable-build-size-8f6a719e7c18
+- [Large File Detection]: https://docs.unity3d.com/Manual/ReducingFilesize.html
+
 
 ## Subtitles
 - [Use TMPro] : https://www.youtube.com/watch?v=mU6Euqcm9UM&ab_channel=JimmyVegas
