@@ -1,6 +1,8 @@
 # Unity-Tutorials-and-Techniques
 Unity Tutorials on web which work, and common techniques I use for my projects
 
+## Mobile Development
+- [How to make game scale with same aspect ratio on all screen resolutions] : https://awesometuts.com/blog/support-mobile-screen-sizes-unity/?utm_medium=video&utm_source=youtube&utm_campaign=how_to_make_your_game_look_the_same_on_all_mobile_screen_sizes
 
 ## Scaffolding 
 
